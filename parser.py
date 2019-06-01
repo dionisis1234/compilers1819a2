@@ -96,7 +96,7 @@ class MyParser:
 			raise ParseError("perimenw id bit_token ")
 	def atom_tail(self):
 		if self.la=='AND':
-			self.match('AND)
+			self.match('AND')
 			self.atom()
 			self.atom_tail()
 		elif self.la == 'XOR' or self.la == 'OR' or self.la == 'IDENTIFIER' or self.la == 'PRINT' or self.la == None or self.la == ')':
