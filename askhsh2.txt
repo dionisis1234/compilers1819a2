@@ -5,5 +5,6 @@ z = 1010 XOR 1111 AND 0011
 g2 = (10011) OR (1111001) AND (1101010) XOR (111001)
 print p
 print r
-print kz
+print k
+print z
 print (g2)
