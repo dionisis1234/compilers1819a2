@@ -14,7 +14,7 @@ class MyParser:
 		letter = plex.Range('azAZ')
 		digit = plex.Range('09')
 		bit = plex.Range('01')
-		bits = plex.Rep1(inp)
+		bits = plex.Rep1(bit)
 		name = letter+plex.Rep(letter|digit)
 		keyword = plex.Str('print','PRINT')
 		operator=plex.Str('AND','OR','XOR','=')
@@ -22,7 +22,7 @@ class MyParser:
 		self.lexicon = plex.Lexicon([
 			(operator,plex.TEXT),
 			(keyword,'PRINT'),
-			(scharplex.TEXT),
+			(schar,plex.TEXT),
 			(name,'IDENTIFIER'),
 			(bits, 'bit_token'),
 			(space,plex.IGNORE)
